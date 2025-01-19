@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévention des Risques - SécuCitoyen</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Tailwind CSS et DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Top App Bar -->
+    <div class="fixed top-0 left-0 right-0 z-40">
+        <div class="h-16 bg-white dark:bg-gray-800 shadow-sm px-4 flex items-center justify-between">
+            <div class="w-12"></div>
+            <div class="flex-1 flex items-center justify-center gap-3">
+                <img src="icons/icon-72x72.png" alt="Logo" class="w-8 h-8 app-logo">
+                <span class="text-lg font-semibold text-gray-900 dark:text-white">SécuCitoyen</span>
+            </div>
+            <button
+                class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 relative transition-colors">
+                <span class="material-icons-round text-gray-600 dark:text-gray-300">notifications</span>
+                <span class="absolute top-3 right-3 w-2 h-2 bg-red-500 rounded-full notification-badge"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Barre de recherche -->
+    <div class="fixed top-16 left-0 right-0 z-30 bg-white dark:bg-gray-800 shadow-sm">
+        <div class="px-15">
+            <div class="relative max-w-2xl mx-auto">
+                <span
+                    class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+                <input type="text" placeholder="Rechercher un risque..." class="w-full pl-10 pr-4 py-2 bg-gray-100 dark:bg-gray-700 border-0 rounded-xl 
+                              text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400
+                              focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 
+                              transition-colors duration-200">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="min-h-screen pt-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-gray-900 dark:text-white mt-4 mb-4">Prévention des Risques</h1>
+            <p class="text-lg text-center text-gray-600 dark:text-gray-300 mb-8">Informations les citoyens sur les dangers potentiels dans leurs environnements quotidien et fournir des conseils pratiques pour les éviter.</p>
+            <!-- Grille des risques -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Incendies domestiques -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-red-100 dark:bg-red-900/30 rounded-lg">
+                            <span
+                                class="material-icons-round text-red-600 dark:text-red-400">local_fire_department</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Incendies domestiques</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Sécuriser votre domicile et adopter les bons
+                        réflexes en cas d'incendie.</p>
+                    <div class="text-center">
+                        <a href="risques/incendies/incendies.html">
+                            <button
+                                class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                                <span class="font-medium">En savoir plus</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fuites d'eau -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                            <span class="material-icons-round text-blue-600 dark:text-blue-400">water_drop</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Fuites d'eau</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Prévenez et gérez les dégâts des eaux</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fuites de gaz -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg">
+                            <span class="material-icons-round text-yellow-600 dark:text-yellow-400">warning_amber</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Fuites de gaz</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Détectez et réagissez aux fuites de gaz</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Les chutes -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-orange-100 dark:bg-orange-900/30 rounded-lg">
+                            <span class="material-icons-round text-orange-600 dark:text-orange-400">elderly</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Les chutes</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Évitez les accidents domestiques liés aux chutes
+                    </p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Les brûlures -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-red-100 dark:bg-red-900/30 rounded-lg">
+                            <span class="material-icons-round text-red-600 dark:text-red-400">whatshot</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Les brûlures</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Prévenez les risques de brûlures</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Les intoxications -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                            <span class="material-icons-round text-purple-600 dark:text-purple-400">science</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Les intoxications</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Protégez-vous des risques d'intoxication</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Les noyades -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                            <span class="material-icons-round text-blue-600 dark:text-blue-400">pool</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Les noyades</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Prévention des risques de noyade</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Les électrocutions -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg">
+                            <span
+                                class="material-icons-round text-yellow-600 dark:text-yellow-400">electrical_services</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Les électrocutions</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Sécurité électrique à la maison</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Accidents de bricolage -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                            <span class="material-icons-round text-gray-600 dark:text-gray-400">build</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Accidents de bricolage</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Bricolez en toute sécurité</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Accidents liés aux animaux -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
+                            <span class="material-icons-round text-amber-600 dark:text-amber-400">pets</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Accidents liés aux animaux</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Cohabiter en sécurité avec vos animaux</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Conseils saisonniers -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-6 mb-24">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg">
+                            <span class="material-icons-round text-green-600 dark:text-green-400">eco</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Conseils saisonniers</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Adaptez votre prévention selon les saisons</p>
+                    <div class="text-center">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 gap-2 group">
+                            <span class="font-medium">En savoir plus</span>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation bottom bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 md:hidden">
+        <div
+            class="md:hidden flex items-center justify-around w-full h-16 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <a href="prevention.html"
+                class="flex flex-col items-center justify-center flex-1 h-full text-blue-600 dark:text-blue-400">
+                <span class="material-icons-round mb-1">security</span>
+                <span class="text-xs">Prévention</span>
+            </a>
+            <a href="#"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">medical_services</span>
+                <span class="text-xs">Secours</span>
+            </a>
+            <a href="index.html"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">home</span>
+                <span class="text-xs">Accueil</span>
+            </a>
+            <a href="#"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">campaign</span>
+                <span class="text-xs">Alertes</span>
+            </a>
+            <a href="#"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">contact_support</span>
+                <span class="text-xs">Autres</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/services/auth-service.js"></script>
+    <script type="module" src="js/components/ui-controller.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

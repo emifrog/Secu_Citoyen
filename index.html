@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SécuCitoyen</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Tailwind CSS et DaisyUI pour un design moderne -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Contenu principal -->
+    <div class="p-4 sm:ml-0">
+        <!-- Top App Bar -->
+        <div class="fixed top-0 left-0 right-0 z-40">
+            <div class="h-16 bg-white dark:bg-gray-800 shadow-sm px-1 flex items-center justify-between">
+                <!-- Espace à gauche pour l'équilibre -->
+                <div class="w-12"></div>
+
+                <!-- Logo et nom au centre -->
+                <div class="flex-1 flex items-center justify-center gap-3">
+                    <img src="icons/icon-72x72.png" alt="Logo" class="w-8 h-8 app-logo">
+                    <span class="text-lg font-semibold text-gray-900 dark:text-white">SécuCitoyen</span>
+                </div>
+
+                <!-- Bouton à droite -->
+                <button
+                    class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 relative transition-colors">
+                    <span class="material-icons-round text-gray-600 dark:text-gray-300">notifications</span>
+                    <!-- Badge de notification -->
+                    <span class="absolute top-3 right-3 w-2 h-2 bg-red-500 rounded-full notification-badge"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Barre de recherche -->
+        <div class="fixed top-16 left-0 right-0 z-30 bg-white dark:bg-gray-800 shadow-sm">
+            <div class="px-15">
+                <div class="relative max-w-2xl mx-auto">
+                    <span
+                        class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+                    <input type="text" placeholder="Rechercher..." class="w-full pl-10 pr-4 py-2 bg-gray-100 dark:bg-gray-700 border-0 rounded-xl 
+                                    text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400
+                                    focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 
+                                    transition-colors duration-200">
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenu de la page -->
+        <div class="min-h-screen pt-28">
+            <!-- Hero Section -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        Protégez-vous et vos proches avec <span
+                            class="text-blue-600 dark:text-blue-400">SécuCitoyen</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                        L'application indispensable pour prévenir les risques, apprendre les gestes de premiers secours
+                        et rester informé en temps réel.
+                    </p>
+                </div>
+
+                <!-- Grid d'images -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 mb-8">
+                    <!-- Carte 1 : Premiers Secours -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <img src="images/cpr.jpg" alt="Premiers secours"
+                            class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                            <div class="absolute bottom-0 p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">Gestes qui sauvent</h3>
+                                <p class="text-gray-200">Apprenez les gestes essentiels de premiers secours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 2 : Prévention -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <img src="images/preparation.jpg" alt="Kit de secours"
+                            class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                            <div class="absolute bottom-0 p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">Prévention</h3>
+                                <p class="text-gray-200">Préparez-vous aux situations d'urgence</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 3 : Alertes -->
+                    <div class="relative mb-8 overflow-hidden rounded-2xl shadow-lg group">
+                        <img src="images/alert-map.jpg" alt="Carte des alertes"
+                            class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                            <div class="absolute bottom-0 p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">Alertes en temps réel</h3>
+                                <p class="text-gray-200">Restez informé des situations à risque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation bottom bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-50">
+        <!-- Desktop Navigation
+        <div
+            class="hidden md:flex justify-center w-full h-16 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 px-4">
+            <div class="max-w-screen-xl w-full flex items-center justify-center space-x-8">
+                <a href="#" class="flex items-center px-4 py-2 text-sm font-medium text-blue-600 dark:text-blue-400">
+                    <span class="material-icons-round mr-2">home</span>
+                    Accueil
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    <span class="material-icons-round mr-2">security</span>
+                    Prévention
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    <span class="material-icons-round mr-2">medical_services</span>
+                    Premier Secours
+                </a>
+                <a href="#"
+                    class="flex items-center px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                    <span class="material-icons-round mr-2">campaign</span>
+                    Alertes
+                </a>
+            </div>
+        </div>
+        -- >
+        <!-- Mobile Navigation -->
+        <div
+            class="md:hidden flex items-center justify-around w-full h-16 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <a href="prevention.html"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">security</span>
+                <span class="text-xs">Prévention</span>
+            </a>
+            <a href="#"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">medical_services</span>
+                <span class="text-xs">Secours</span>
+            </a>
+            <a href="index.html"
+                class="flex flex-col items-center justify-center flex-1 h-full text-blue-600 dark:text-blue-400">
+                <span class="material-icons-round mb-1">home</span>
+                <span class="text-xs">Accueil</span>
+            </a>
+            <a href="#"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">campaign</span>
+                <span class="text-xs">Alertes</span>
+            </a>
+            <a href="#"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">contact_support</span>
+                <span class="text-xs">Autres</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/services/auth-service.js"></script>
+    <script type="module" src="js/components/auth-ui.js"></script>
+    <script type="module" src="js/components/storage-ui.js"></script>
+    <script type="module" src="js/components/notification-ui.js"></script>
+    <script type="module" src="js/components/ui-controller.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

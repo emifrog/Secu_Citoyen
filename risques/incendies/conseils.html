@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-list Sécurité Incendie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Top App Bar -->
+    <div class="fixed top-0 left-0 right-0 z-40">
+        <div class="h-16 bg-white dark:bg-gray-800 shadow-sm px-4 flex items-center justify-between">
+            <a href="incendies.html" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class="material-icons-round text-gray-600 dark:text-gray-300">arrow_back</span>
+            </a>
+            <div class="flex-1 flex items-center justify-center gap-3">
+                <img src="../../icons/icon-72x72.png" alt="Logo" class="w-8 h-8 app-logo">
+                <span class="text-lg font-semibold text-gray-900 dark:text-white">SécuCitoyen</span>
+            </div>
+            <button class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 relative transition-colors">
+                <span class="material-icons-round text-gray-600 dark:text-gray-300">notifications</span>
+                <span class="absolute top-3 right-3 w-2 h-2 bg-red-500 rounded-full notification-badge"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="container mx-auto px-4 pt-20 pb-20 max-w-4xl">
+        <h1 class="text-2xl text-center font-bold text-gray-900 dark:text-white mb-6 flex items-center justify-center">
+            Conseils de Prévention des Incendies
+        </h1>
+        <p class="text-lg text-center text-gray-600 dark:text-gray-300 mb-8">
+                        
+        </p>
+        <!-- Causes fréquentes -->
+        <section class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4 flex items-center justify-center">
+                <span class="material-icons-round mr-2 text-red-500">warning</span>
+                Causes fréquentes
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-red-500 mr-2">heat_pump</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Appareils de chauffage</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Appareils de chauffage défectueux ou mal utilisés (radiateurs, cheminées, etc.)</p>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-red-500 mr-2">electrical_services</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Problèmes électriques</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Courts-circuits électriques (prises surchargées, fils dénudés)</p>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-red-500 mr-2">kitchen</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Cuisine</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Cuisinières et fours laissés sans surveillance</p>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-red-500 mr-2">local_fire_department</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Sources de flammes</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Bougies et cigarettes mal éteintes</p>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-red-500 mr-2">child_care</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Accidents domestiques</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Jeux d'enfants avec le feu</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mesures de prévention -->
+        <section>
+            <h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4 flex items-center justify-center">
+                <span class="material-icons-round mr-2 text-green-500">security</span>
+                Mesures de prévention
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-green-500 mr-2">build</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Entretien régulier</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Faire vérifier et entretenir régulièrement les appareils de chauffage</p>
+                    <button class="mt-3 text-blue-600 dark:text-blue-400 text-sm flex items-center hover:underline">
+                        En savoir plus
+                        <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-green-500 mr-2">power</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Sécurité électrique</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Ne pas surcharger les prises électriques</p>
+                    <button class="mt-3 text-blue-600 dark:text-blue-400 text-sm flex items-center hover:underline">
+                        En savoir plus
+                        <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-green-500 mr-2">timer</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Vigilance en cuisine</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Ne jamais laisser une cuisinière ou un four sans surveillance</p>
+                    <button class="mt-3 text-blue-600 dark:text-blue-400 text-sm flex items-center hover:underline">
+                        En savoir plus
+                        <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-green-500 mr-2">do_not_disturb</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Sources de flammes</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Éteindre correctement les bougies et les cigarettes</p>
+                    <button class="mt-3 text-blue-600 dark:text-blue-400 text-sm flex items-center hover:underline">
+                        En savoir plus
+                        <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-green-500 mr-2">family_restroom</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Sécurité des enfants</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Tenir les allumettes et les briquets hors de portée des enfants</p>
+                    <button class="mt-3 text-blue-600 dark:text-blue-400 text-sm flex items-center hover:underline">
+                        En savoir plus
+                        <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-green-500 mr-2">notifications_active</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Équipements de sécurité</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Installer des détecteurs de fumée et les entretenir</p>
+                    <button class="mt-3 text-blue-600 dark:text-blue-400 text-sm flex items-center hover:underline">
+                        En savoir plus
+                        <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-green-500 mr-2">fire_extinguisher</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Extincteur</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Avoir un extincteur à portée de main et savoir l'utiliser</p>
+                    <button class="mt-3 text-blue-600 dark:text-blue-400 text-sm flex items-center hover:underline">
+                        En savoir plus
+                        <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 shadow-sm p-4 rounded-lg hover:shadow-md transition-shadow duration-300">
+                    <div class="flex items-center mb-3">
+                        <span class="material-icons-round text-green-500 mr-2">directions_run</span>
+                        <h3 class="font-medium text-gray-800 dark:text-gray-200">Plan d'évacuation</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Établir un plan d'évacuation et le partager avec tous les membres du foyer</p>
+                    <button class="mt-3 text-blue-600 dark:text-blue-400 text-sm flex items-center hover:underline">
+                        En savoir plus
+                        <span class="material-icons-round text-sm ml-1">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Navigation bottom bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 md:hidden">
+        <div class="md:hidden flex items-center justify-around w-full h-16 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <a href="checklist.html" class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">fact_check</span>
+                <span class="text-xs">Check-list</span>
+            </a>
+            <a href="conseils.html" class="flex flex-col items-center justify-center flex-1 h-full text-blue-600 dark:text-blue-400">
+                <span class="material-icons-round mb-1">info</span>
+                <span class="text-xs">Conseils</span>
+            </a>
+            <a href="../../index.html" class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">home</span>
+                <span class="text-xs">Accueil</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">play_circle</span>
+                <span class="text-xs">Vidéos</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">phone_iphone</span>
+                <span class="text-xs">Numéros</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script type="module" src="../../js/firebase-config.js"></script>
+    <script type="module" src="../../js/services/auth-service.js"></script>
+    <script type="module" src="../../js/components/ui-controller.js"></script>
+    <script type="module" src="../../js/app.js"></script>
+</body>
+</html>

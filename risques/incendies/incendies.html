@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévention des Incendies Domestiques - SécuCitoyen</title>
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Tailwind CSS et DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Top App Bar -->
+    <div class="fixed top-0 left-0 right-0 z-40">
+        <div class="h-16 bg-white dark:bg-gray-800 shadow-sm px-4 flex items-center justify-between">
+            <a href="../../prevention.html" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class="material-icons-round text-gray-600 dark:text-gray-300">arrow_back</span>
+            </a>
+            <div class="flex-1 flex items-center justify-center gap-3">
+                <img src="../../icons/icon-72x72.png" alt="Logo" class="w-8 h-8 app-logo">
+                <span class="text-lg font-semibold text-gray-900 dark:text-white">SécuCitoyen</span>
+            </div>
+            <button
+                class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 relative transition-colors">
+                <span class="material-icons-round text-gray-600 dark:text-gray-300">notifications</span>
+                <span class="absolute top-3 right-3 w-2 h-2 bg-red-500 rounded-full notification-badge"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="min-h-screen pt-20">
+        <div class="max-w-4xl mx-auto px-4 pb-1 mb-8 sm:px-6 lg:px-8">
+            <!-- En-tête -->
+            <div class="mb-8">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-red-100 dark:bg-red-900/30 rounded-lg">
+                        <span class="material-icons-round text-red-600 dark:text-red-400 text-2xl">local_fire_department</span>
+                    </div>
+                    <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Incendies Domestiques</h1>
+                </div>
+                <p class="text-lg text-center text-gray-600 dark:text-gray-300">
+                    Les incendies domestiques représentent l'un des risques les plus graves à la maison. Chaque année en France, ils causent de nombreux décès et blessures qui pourraient être évités grâce à une bonne prévention.
+                </p>
+            </div>
+            <!-- Grid d'images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mb-8">
+                <!-- Incendie -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg group overflow-hidden">
+                    <div class=" aspect-video bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+                        <img src="../../images/incendies/incendie.jpg" alt="Prévention incendie">
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mb-12">
+                <!-- Incendie -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg group overflow-hidden">
+                    <div class=" aspect-video bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+                        <img src="../../images/incendies/incendies-dom.jpg" alt="Prévention incendie">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation bottom bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 md:hidden">
+        <div
+            class="md:hidden flex items-center justify-around w-full h-16 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <a href="checklist.html"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">fact_check</span>
+                <span class="text-xs">Check-list</span>
+            </a>
+            <a href="conseils.html"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">info</span>
+                <span class="text-xs">Conseils</span>
+            </a>
+            <a href="../../index.html"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">home</span>
+                <span class="text-xs">Accueil</span>
+            </a>
+            <a href="#"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">play_circle</span>
+                <span class="text-xs">Vidéos</span>
+            </a>
+            <a href="#"
+                class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">phone_iphone</span>
+                <span class="text-xs">Numéros</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script type="module" src="../../js/firebase-config.js"></script>
+    <script type="module" src="../../js/services/auth-service.js"></script>
+    <script type="module" src="../../js/components/ui-controller.js"></script>
+    <script type="module" src="../../js/app.js"></script>
+</body>
+
+</html>

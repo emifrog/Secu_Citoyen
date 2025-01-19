@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-list Sécurité Incendie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Top App Bar -->
+    <div class="fixed top-0 left-0 right-0 z-40">
+        <div class="h-16 bg-white dark:bg-gray-800 shadow-sm px-4 flex items-center justify-between">
+            <a href="incendies.html" class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class="material-icons-round text-gray-600 dark:text-gray-300">arrow_back</span>
+            </a>
+            <div class="flex-1 flex items-center justify-center gap-3">
+                <img src="../../icons/icon-72x72.png" alt="Logo" class="w-8 h-8 app-logo">
+                <span class="text-lg font-semibold text-gray-900 dark:text-white">SécuCitoyen</span>
+            </div>
+            <button class="w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 relative transition-colors">
+                <span class="material-icons-round text-gray-600 dark:text-gray-300">notifications</span>
+                <span class="absolute top-3 right-3 w-2 h-2 bg-red-500 rounded-full notification-badge"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="min-h-screen pt-20 px-4 pb-24">
+        <div class="max-w-4xl mx-auto">
+            <!-- En-tête -->
+            <div class="mb-8">
+                <h1 class="text-2xl text-center mb-6 font-bold text-gray-900 dark:text-white">Check-list de Sécurité</h1>            
+                <p class="text-lg text-gray-600 dark:text-gray-300 text-center">
+                    Vérifiez régulièrement ces points essentiels pour la sécurité de votre domicile.
+                </p>
+                <!-- Progression -->
+                <div class="mt-6 p-4 bg-white dark:bg-gray-800 rounded-xl">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Progression</span>
+                        <span class="text-sm font-medium text-blue-600 dark:text-blue-400" id="progressText">0/12</span>
+                    </div>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="bg-blue-600 h-2.5 rounded-full" id="progressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Détecteurs de fumée -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-icons-round text-red-500 text-2xl">notifications_active</span>
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Détecteurs de fumée</h2>
+                    </div>
+                    
+                    <!-- Image du détecteur -->
+                    <div class="mb-6 rounded-lg overflow-hidden">
+                        <img src="../../images/incendies/détecteur.jpg" alt="Détecteur de fumée" class="w-full h-48 object-cover">
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Présence -->
+                        <div class="space-y-4">
+                            <label class="flex items-start gap-4 cursor-pointer">
+                                <input type="checkbox" class="mt-1 checkbox checkbox-primary" data-item="detector-presence" />
+                                <div>
+                                    <div class="font-medium text-gray-900 dark:text-white">Présence de détecteurs</div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Au moins un détecteur par étage, idéalement dans chaque chambre et les couloirs</p>
+                                </div>
+                            </label>
+                            <div class="ml-8 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg">
+                                <h3 class="text-sm font-medium text-blue-900 dark:text-blue-400 mb-2">Pourquoi c'est important</h3>
+                                <p class="text-sm text-blue-800 dark:text-blue-300">Les détecteurs de fumée sont essentiels pour alerter rapidement en cas de début d'incendie, même pendant le sommeil.</p>
+                                <h3 class="text-sm font-medium text-blue-900 dark:text-blue-400 mt-3 mb-2">Conseils d'entretien</h3>
+                                <ul class="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
+                                    <li>Testez mensuellement avec le bouton de test</li>
+                                    <li>Remplacez les piles annuellement</li>
+                                    <li>Dépoussiérez régulièrement</li>
+                                    <li>Remplacez le détecteur tous les 10 ans</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Fonctionnement -->
+                        <div class="space-y-4">
+                            <label class="flex items-start gap-4 cursor-pointer">
+                                <input type="checkbox" class="mt-1 checkbox checkbox-primary" data-item="detector-function" />
+                                <div>
+                                    <div class="font-medium text-gray-900 dark:text-white">Vérification du fonctionnement</div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Test régulier des détecteurs</p>
+                                </div>
+                            </label>
+                            <div class="ml-8 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg">
+                                <p class="text-sm text-blue-800 dark:text-blue-300">Soyez attentif aux signaux sonores (bips) indiquant une pile faible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extincteur -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-icons-round text-red-500 text-2xl">fire_extinguisher</span>
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Extincteur</h2>
+                    </div>
+                    <!-- Image du extincteur -->
+                    <div class="mb-6 rounded-lg overflow-hidden">
+                        <img src="../../images/incendies/extincteur.jpg" alt="Extincteur" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="space-y-6">
+                        <!-- Présence -->
+                        <div class="space-y-4">
+                            <label class="flex items-start gap-4 cursor-pointer">
+                                <input type="checkbox" class="mt-1 checkbox checkbox-primary" data-item="extinguisher-presence" />
+                                <div>
+                                    <div class="font-medium text-gray-900 dark:text-white">Présence d'un extincteur adapté</div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Type ABC recommandé pour usage domestique</p>
+                                </div>
+                            </label>
+                            <div class="ml-8 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg">
+                                <h3 class="text-sm font-medium text-blue-900 dark:text-blue-400 mb-2">Types d'extincteurs</h3>
+                                <ul class="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
+                                    <li>Type A : Feux de matières solides</li>
+                                    <li>Type B : Feux de liquides</li>
+                                    <li>Type C : Feux de gaz</li>
+                                </ul>
+                                <h3 class="text-sm font-medium text-blue-900 dark:text-blue-400 mt-3 mb-2">Entretien</h3>
+                                <ul class="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
+                                    <li>Vérifiez la pression (zone verte)</li>
+                                    <li>Révision professionnelle tous les 5 ans</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Formation -->
+                        <div class="space-y-4">
+                            <label class="flex items-start gap-4 cursor-pointer">
+                                <input type="checkbox" class="mt-1 checkbox checkbox-primary" data-item="extinguisher-training" />
+                                <div>
+                                    <div class="font-medium text-gray-900 dark:text-white">Formation à l'utilisation</div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Savoir utiliser l'extincteur correctement</p>
+                                </div>
+                            </label>
+                            <div class="ml-8 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg">
+                                <p class="text-sm text-blue-800 dark:text-blue-300">Familiarisez-vous avec le mode d'emploi et envisagez une formation pratique pour une utilisation efficace en cas d'urgence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan d'évacuation -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-icons-round text-green-500 text-2xl">directions_run</span>
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Plan d'évacuation</h2>
+                    </div>
+                    <!-- Image du plan -->
+                    <div class="mb-6 rounded-lg overflow-hidden">
+                        <img src="../../images/incendies/plan-d-evacuation-incendie.jpg" alt="Plan d'évacuation" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="space-y-6">
+                        <!-- Existence -->
+                        <div class="space-y-4">
+                            <label class="flex items-start gap-4 cursor-pointer">
+                                <input type="checkbox" class="mt-1 checkbox checkbox-primary" data-item="evacuation-plan" />
+                                <div>
+                                    <div class="font-medium text-gray-900 dark:text-white">Plan d'évacuation établi</div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Identification des sorties et point de rassemblement</p>
+                                </div>
+                            </label>
+                            <div class="ml-8 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg">
+                                <h3 class="text-sm font-medium text-blue-900 dark:text-blue-400 mb-2">Points essentiels</h3>
+                                <ul class="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
+                                    <li>Identifier toutes les sorties possibles</li>
+                                    <li>Définir un point de rassemblement</li>
+                                    <li>Prévoir des alternatives si une sortie est bloquée</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Connaissance -->
+                        <div class="space-y-4">
+                            <label class="flex items-start gap-4 cursor-pointer">
+                                <input type="checkbox" class="mt-1 checkbox checkbox-primary" data-item="evacuation-knowledge" />
+                                <div>
+                                    <div class="font-medium text-gray-900 dark:text-white">Connaissance du plan</div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Tous les membres du foyer connaissent le plan</p>
+                                </div>
+                            </label>
+                            <div class="ml-8 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg">
+                                <p class="text-sm text-blue-800 dark:text-blue-300">Organisez des exercices d'évacuation réguliers avec tous les membres du foyer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stockage des produits inflammables -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="material-icons-round text-orange-500 text-2xl">warning</span>
+                        <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Produits inflammables</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" class="mt-1 checkbox checkbox-primary" data-item="storage-safety" />
+                            <div>
+                                <div class="font-medium text-gray-900 dark:text-white">Stockage sécurisé</div>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Produits stockés de manière sûre et adaptée</p>
+                            </div>
+                        </label>
+                        <div class="ml-8 p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg">
+                            <h3 class="text-sm font-medium text-blue-900 dark:text-blue-400 mb-2">Conseils de stockage</h3>
+                            <ul class="text-sm text-blue-800 dark:text-blue-300 list-disc list-inside space-y-1">
+                                <li>Endroit frais et sec</li>
+                                <li>Bonne ventilation</li>
+                                <li>Contenants d'origine hermétiques</li>
+                                <li>Éloigné des sources de chaleur</li>
+                                <li>Hors de portée des enfants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation bottom bar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-40 md:hidden">
+        <div class="md:hidden flex items-center justify-around w-full h-16 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <a href="checklist.html" class="flex flex-col items-center justify-center flex-1 h-full text-blue-600 dark:text-blue-400">
+                <span class="material-icons-round mb-1">fact_check</span>
+                <span class="text-xs">Check-list</span>
+            </a>
+            <a href="conseils.html" class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">info</span>
+                <span class="text-xs">Conseils</span>
+            </a>
+            <a href="../../index.html" class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">home</span>
+                <span class="text-xs">Accueil</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">play_circle</span>
+                <span class="text-xs">Vidéos</span>
+            </a>
+            <a href="#" class="flex flex-col items-center justify-center flex-1 h-full text-gray-600 dark:text-gray-300">
+                <span class="material-icons-round mb-1">phone_iphone</span>
+                <span class="text-xs">Numéros</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // Gestion de la progression
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"][data-item]');
+            const total = checkboxes.length;
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            
+            const percentage = (checked / total) * 100;
+            progressBar.style.width = percentage + '%';
+            progressText.textContent = checked + '/' + total;
+
+            // Sauvegarder l'état
+            checkboxes.forEach(checkbox => {
+                const id = checkbox.dataset.item;
+                localStorage.setItem(id, checkbox.checked);
+            });
+        }
+
+        // Restaurer l'état et configurer les écouteurs
+        document.querySelectorAll('input[type="checkbox"][data-item]').forEach(checkbox => {
+            const id = checkbox.dataset.item;
+            checkbox.checked = localStorage.getItem(id) === 'true';
+            checkbox.addEventListener('change', updateProgress);
+        });
+
+        // Initialiser la progression
+        updateProgress();
+    </script>
+
+    <!-- Scripts -->
+    <script type="module" src="../../js/firebase-config.js"></script>
+    <script type="module" src="../../js/services/auth-service.js"></script>
+    <script type="module" src="../../js/components/ui-controller.js"></script>
+    <script type="module" src="../../js/app.js"></script>
+</body>
+</html>
